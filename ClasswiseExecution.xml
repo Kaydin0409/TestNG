@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Class Based Execution">
+    <test verbose="2" preserve-order="true" name="C:/Users/kelli/IdeaProjects/TestNG">
+
+        <classes>
+            <class name="class02.EnableDisable"></class>
+            <class name="class01.testNGAnnotations"></class>
+            <class name="class02.Priority"></class>
+        </classes>
+
+    </test>
+</suite>

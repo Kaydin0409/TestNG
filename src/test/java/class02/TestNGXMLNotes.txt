@@ -1,0 +1,71 @@
+==>TestNG XML
+    *Gives us the control to decide what to execute from the whole project
+        1. we can decide which package to execute
+        2. we can decide which specific class to execute
+        3. we can decide which methods to execute
+
+        Task1:
+        Class wise execution of Project suing testNg XML:
+        <suite>
+            <test >
+
+
+                <classes>
+                    <class name="class02.enableDisable"></class>
+                    <class name="class01.testNGannotations"></class>
+                    <class name="class02.priority"></class>
+                </classes>
+            </test>
+        </suite>
+
+    Task2:
+    Method Wise execution
+    <suite>
+        <test >
+        		<classes>
+        			<class>
+        		   		<methods>
+                        		<include name="ThirdTest"></include>
+                        		<include name="FourthTest"></include>
+                        		<include name="FirstTest"></include>
+                        		<include name="SecondTest"></include>
+                    	</methods>
+                    </class>
+                  </classes>
+        </test>
+    </suite>
+
+    Task3: package based Execution:
+    <suite name="All Test Suite">
+        <test>
+          <packages>
+              <package name="class01"></package>
+          </packages>
+        </test>
+    </suite>
+
+    Task4:
+    Group based execution
+    helps you run batch execution
+    e.g you might want to run all the tst cases catogerized under smoke testing
+    or you might want to run all test cases under the regression testing
+    or you might want to run all the test cases belonging to login fucntionality
+    Syntax:
+    <suite>
+        <test >
+            <groups>
+                <run>
+                    <include name="regression"></include>
+                </run>
+            </groups>
+            then u define class or package on which you want this to implement
+            <packages>
+                <package name="class02"></package>
+            </packages>
+        </test>
+    </suite>
+    Note:
+    if you have a before or after method annotation associated with
+    a particular @test annotaiton marked with some kind of group
+    then you must must must mark you BEFORE AND AFTER method
+    to (alwaysRun=ture)
